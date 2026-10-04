@@ -48,7 +48,7 @@ Since this is a custom application, you must provide your own Google API Client 
 ## Authentication
 
 The very first time you start the app, or if you need to authorize it with your Google Account, run the CLI:
-`python main.py auth` on Windows or `quick-tasks auth` on Linux. 
+`python src/main.py auth` on Windows or `quick-tasks auth` on Linux. 
 
 This will open your browser and generate the required OAuth token safely stored in your local configuration dir!
 

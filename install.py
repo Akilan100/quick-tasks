@@ -32,7 +32,7 @@ def setup_windows():
     if not os.path.exists(pythonw):
         pythonw = sys.executable
     
-    main_script = os.path.abspath("main.py")
+    main_script = os.path.abspath(os.path.join("src", "main.py"))
     
     vbs_path = os.path.join(os.environ.get("TEMP", "C:/Windows/Temp"), "create_shortcut.vbs")
     
@@ -67,7 +67,7 @@ def setup_linux():
     print_step("Installing Systemd Service...")
     service_path = Path.home() / ".config/systemd/user/quick-tasks.service"
     service_path.parent.mkdir(parents=True, exist_ok=True)
-    main_script = os.path.abspath("main.py")
+    main_script = os.path.abspath(os.path.join("src", "main.py"))
     service_content = f"""[Unit]
 Description=QuickTasks Daemon
 After=graphical-session.target
@@ -109,7 +109,7 @@ def main():
         
     print("\nIMPORTANT API SETUP:")
     print(f"To use Google Tasks, place your Google Cloud OAuth token at: {config_dir / 'client_secret.json'}")
-    print("Then run 'quick-tasks auth' in your terminal (or 'python main.py auth' on Windows) to log in!\n")
+    print("Then run 'quick-tasks auth' in your terminal (or 'python src/main.py auth' on Windows) to log in!\n")
 
 if __name__ == "__main__":
     main()
