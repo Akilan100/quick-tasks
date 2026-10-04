@@ -1,0 +1,222 @@
+/* ==========================================================================
+   QuickTasks Dark OLED Precision Design System
+   ========================================================================== */
+
+/* Outer Window Frame */
+QWidget#OverlayContainer {
+    background-color: #07090e;
+    border: 1px solid #1a2233;
+    border-radius: 12px;
+}
+
+/* Header Bar */
+QFrame#DragHeaderBar {
+    background-color: transparent;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+QLabel#BrandLabel {
+    color: #f8fafc;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", monospace;
+    letter-spacing: 0.8px;
+    padding: 2px 4px;
+}
+
+QLabel#BadgeCountLabel {
+    color: #38bdf8;
+    background-color: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", monospace;
+    padding: 2px 8px;
+    letter-spacing: 0.4px;
+}
+
+/* Header Controls */
+QPushButton#HideDoneButton {
+    background-color: #0d121d;
+    border: 1px solid #1e283d;
+    border-radius: 6px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0 10px;
+    height: 26px;
+}
+
+QPushButton#HideDoneButton:hover {
+    background-color: #141b2b;
+    border-color: #38bdf8;
+    color: #f1f5f9;
+}
+
+QPushButton#HideDoneButton:checked {
+    background-color: rgba(56, 189, 248, 0.12);
+    border: 1px solid #0284c7;
+    color: #38bdf8;
+}
+
+QPushButton#CloseButton {
+    background-color: #0d121d;
+    border: 1px solid #1e283d;
+    border-radius: 6px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: bold;
+    width: 26px;
+    height: 26px;
+}
+
+QPushButton#CloseButton:hover {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #ef4444;
+}
+
+/* Task Input Bar */
+QLineEdit#TaskInput {
+    background-color: #0a0d15;
+    border: 1px solid #1a2336;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #f8fafc;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    selection-background-color: #0284c7;
+    selection-color: #ffffff;
+}
+
+QLineEdit#TaskInput:focus {
+    border: 1px solid #38bdf8;
+    background-color: #0d121e;
+}
+
+/* Task List Container */
+QListWidget#TaskList {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 2px 0px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* Task Row Cards */
+QListWidget#TaskList::item {
+    background-color: #0b0f18;
+    border: 1px solid #172030;
+    border-radius: 8px;
+    margin: 3px 0px;
+    padding: 0px;
+}
+
+QListWidget#TaskList::item:hover {
+    background-color: #101624;
+    border-color: #24324c;
+}
+
+QListWidget#TaskList::item:selected {
+    background-color: #131c2e;
+    border: 1px solid #0284c7;
+}
+
+/* Task Row Checkbox */
+QPushButton.TaskCheckBtn {
+    background-color: #0e1420;
+    border: 1.5px solid #28364f;
+    border-radius: 5px;
+    color: transparent;
+}
+
+QPushButton.TaskCheckBtn:hover {
+    border-color: #38bdf8;
+    background-color: #141c2c;
+}
+
+QPushButton.TaskCheckBtn[checked="true"] {
+    background-color: #10b981;
+    border: 1.5px solid #059669;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+/* Task Row Action Buttons */
+QPushButton.TaskDeleteBtn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #475569;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+QPushButton.TaskDeleteBtn:hover {
+    background-color: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #ef4444;
+}
+
+/* Footer Section */
+QLabel#FooterLabel {
+    color: #64748b;
+    font-size: 11px;
+}
+
+QLabel#SyncStatusConnected {
+    color: #34d399;
+    font-size: 11px;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", monospace;
+    font-weight: 600;
+}
+
+QLabel#SyncStatusDisconnected {
+    color: #f59e0b;
+    font-size: 11px;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", monospace;
+    font-weight: 600;
+}
+
+QPushButton#AuthButton {
+    background-color: #0d121d;
+    border: 1px solid #1e283d;
+    border-radius: 5px;
+    color: #38bdf8;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+QPushButton#AuthButton:hover {
+    background-color: #141b2b;
+    border-color: #38bdf8;
+    color: #ffffff;
+}
+
+/* Scrollbar Minimalist Design */
+QScrollBar:vertical {
+    border: none;
+    background: transparent;
+    width: 5px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #1e283d;
+    min-height: 24px;
+    border-radius: 2px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #38bdf8;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
