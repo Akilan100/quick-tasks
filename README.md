@@ -13,6 +13,16 @@ It’s designed to be hooked to a global keyboard shortcut (like \`Super+Shift+T
 
 ## Installation 
 
+### Prerequisites: Google API Setup
+Since this is a custom application, you must provide your own Google API Client Secret. This ensures your data stays in your personal Google account.
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a New Project and enable the **Google Tasks API**.
+3. Go to **Credentials**, create an **OAuth 2.0 Client ID** (choose "Desktop App").
+4. Download the JSON file and rename it to `client_secret.json`.
+5. Place this file inside your configuration directory BEFORE authenticating:
+   - Linux: `~/.config/quick-tasks/client_secret.json`
+   - Windows: `C:\Users\YOUR_NAME\.config\quick-tasks\client_secret.json`
+
 ### Windows (10/11)
 
 1. Clone or download this repository.

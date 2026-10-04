@@ -27,8 +27,8 @@ def format_google_error(e: Exception) -> str:
         content = e.content.decode("utf-8") if isinstance(getattr(e, "content", ""), bytes) else str(getattr(e, "content", ""))
         if "accessNotConfigured" in content or "has not been used in project" in content:
             return (
-                "Google Tasks API is disabled in your Google Cloud Project (719249904620).\n"
-                "Enable it by visiting: https://console.developers.google.com/apis/api/tasks.googleapis.com/overview?project=719249904620"
+                "Google Tasks API is disabled in your Google Cloud Project.\n"
+                "Enable it by visiting the Google Cloud Console for your project."
             )
         return f"Google Tasks API HTTP {getattr(e.resp, 'status', 'Error')}: {getattr(e, 'reason', str(e))}"
     return str(e)

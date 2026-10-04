@@ -95,6 +95,10 @@ WantedBy=default.target
 
 def main():
     print("Welcome to QuickTasks cross-platform installer!")
+    
+    config_dir = Path.home() / ".config/quick-tasks"
+    config_dir.mkdir(parents=True, exist_ok=True)
+    
     if os.name == 'nt':
         setup_windows()
         print("\nSetup Complete! You can press Win+R and type shell:startup to see the autorun.")
@@ -102,6 +106,10 @@ def main():
     else:
         setup_linux()
         print("\nSetup Complete! Run 'quick-tasks toggle' or bind it to a Global Window Manager Hotkey.")
+        
+    print("\nIMPORTANT API SETUP:")
+    print(f"To use Google Tasks, place your Google Cloud OAuth token at: {config_dir / 'client_secret.json'}")
+    print("Then run 'quick-tasks auth' in your terminal (or 'python main.py auth' on Windows) to log in!\n")
 
 if __name__ == "__main__":
     main()
